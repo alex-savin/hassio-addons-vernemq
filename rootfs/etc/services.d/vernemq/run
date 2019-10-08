@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# SmartHouse Hass.io Add-ons: VerdeMQ
+# Runs the VerdeMQ MQTT Server
+# ==============================================================================
+LOG_LEVEL=$(bashio::config 'log_level')
+export LOG_LEVEL
+
+# Run the VerdeMQ MQTT Server
+bashio::log.info "Starting VerdeMQ MQTT Server..."
+exec start_vernemq
